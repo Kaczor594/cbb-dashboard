@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# Internal dev notes
+CLAUDE.md
+CLAUDE_HANDOFF.md
+.claude/
