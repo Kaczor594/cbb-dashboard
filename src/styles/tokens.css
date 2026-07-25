@@ -4,11 +4,11 @@
    =========================================================== */
 
 /* ---------- Fonts (Google Fonts CDN; substitutions flagged) ----------
-   Display: Fraunces — warm transitional serif with optical sizing.
-            Subbing for a licensed Tiempos/Domaine face; replace .woff2 below.
-   Body:    Söhne-adjacent grot → using Geist Sans (similar metrics, open).
-   Mono:    JetBrains Mono (for R/SQL/data)
-   Editorial: Fraunces italic at display sizes doubles as the editorial serif. */
+   Display + prose: Spectral — old-style book serif (Production Type), low
+            contrast, sturdy serifs, designed for screen text. Stands in for a
+            licensed Freight Text / Tiempos / Lyon; replace .woff2 to upgrade.
+   Body/UI: Archivo — plain-spoken American gothic.
+   Mono:    IBM Plex Mono (for R/SQL/data) */
 
 :root {
   /* ====================================================
@@ -230,11 +230,11 @@
   /* ====================================================
      TYPE — serif display, grot body, mono for data
      ==================================================== */
-  --font-display: 'Fraunces', 'Tiempos Headline', 'Domaine Display', Georgia, serif;
-  --font-serif:   'Fraunces', 'Tiempos Text', Georgia, serif;
-  --font-prose:   'EB Garamond', 'Adobe Garamond Pro', Garamond, Georgia, serif;
-  --font-sans:    'Geist', 'Söhne', 'Inter', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:    'Geist Mono', 'JetBrains Mono', 'SF Mono', 'IBM Plex Mono', Menlo, monospace;
+  --font-display: 'Spectral', 'Freight Text Pro', 'Tiempos Headline', Georgia, serif;
+  --font-serif:   'Spectral', 'Tiempos Text', Georgia, serif;
+  --font-prose:   'Spectral', 'Freight Text Pro', Georgia, serif;
+  --font-sans:    'Archivo', 'Söhne', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'SF Mono', Menlo, monospace;
 
   /* Type scale — editorial. Larger gap between display and body. */
   --text-xs:   11px;
@@ -253,9 +253,9 @@
   --leading-body:  1.58;
   --leading-loose: 1.75;
 
-  --tracking-tighter: -0.035em;
-  --tracking-tight:   -0.02em;
-  --tracking-snug:    -0.01em;
+  --tracking-tighter: -0.018em;
+  --tracking-tight:   -0.012em;
+  --tracking-snug:    -0.006em;
   --tracking-body:    0;
   --tracking-wide:    0.04em;
   --tracking-wider:   0.14em;   /* for overlines */
@@ -401,8 +401,7 @@ pre {
   font-weight: 500;
 }
 
-/* Serif display — headlines in editorial contexts.
-   Fraunces italic "SOFT" axis gives it a hand-drawn, old-cut feel. */
+/* Serif display — headlines in editorial contexts. */
 .serif-display {
   font-family: var(--font-display);
   font-weight: 400;
@@ -573,6 +572,14 @@ hr {
   font-size: 0.85em;
   margin-right: 0.4ch;
   transform: translateY(-1px);
+}
+
+/* Emphasis in a HEADLINE: there isn't any. If a headline needs a word
+   emphasised, the headline is too long — cut it until the emphasis is
+   structural. */
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
+.serif-display em, .hero-title em, .chart-title em {
+  font-style: normal;
 }
 
 /* Tabular nums helper — apply anywhere a number is read against another.

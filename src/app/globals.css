@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Archivo:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 @import "../styles/tokens.css";
 
@@ -257,13 +257,13 @@ tr.smx-row > td { padding: 0 10px 14px; }
 
 /* ============================================================
    METHOD — the "how it works" explainer page.
-   Editorial prose (EB Garamond body, Fraunces titles via the kit),
+   Editorial prose (Spectral body, Spectral titles via the kit),
    a conceptual pipeline diagram, formula blocks, a truncated
    backtest bar set, and definition lists. Reading-first, so the
    measure is constrained even inside full-width cards.
    ============================================================ */
 
-/* Prose — EB Garamond, generous leading, comfortable measure. */
+/* Prose — Spectral, generous leading, comfortable measure. */
 .mthd-prose, .mthd-lede { font-family: var(--font-prose); color: var(--fg-1); }
 .mthd-prose p, .mthd-lede p {
   font-size: 16px; line-height: 1.62; color: var(--fg-1);
